@@ -1,0 +1,42 @@
+---
+import '../tailwind.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-var-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicons/favicon.ico?v=9521" sizes="any" /><!-- 32X32 -->
+    <link rel="icon" href="/favicons/icon.svg?v=9521" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      href="/favicons/apple-touch-icon.png?v=9521"
+    /><!-- 180X180 -->
+    <link rel="manifest" href="/favicons/site.webmanifest?v=9521" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content="Astro description" />
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>

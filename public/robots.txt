@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+User-agent: rogerbot
+Crawl-delay: 2

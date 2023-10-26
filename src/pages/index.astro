@@ -1,0 +1,9 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+
+import { siteConfig } from '@config/site';
+---
+
+<MainLayout title={siteConfig.name}>
+  <div class="mt-24 flex flex-col gap-32 sm:mt-32">{siteConfig.name}</div>
+</MainLayout>
